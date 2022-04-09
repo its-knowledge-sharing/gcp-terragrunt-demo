@@ -6,6 +6,8 @@ locals {
 
 inputs = {
   project = local.project
+  region = local.region
+  
   name_prefix = "evermed-edh"
   vpc_name  = "evermed-edh-vpc"
 
