@@ -1,6 +1,6 @@
 
 module "gce" {
-  source          = "git::https://github.com/its-software-services-devops/tf-module-gcp-vm.git//modules?ref=1.0.15"
+  source          = "git::https://github.com/its-software-services-devops/tf-module-gcp-vm.git//modules?ref=1.0.16"
   compute_name    = var.vm_name
   compute_seq     = var.vm_sequence
   vm_tags         = var.vm_tags
@@ -15,5 +15,5 @@ module "gce" {
   create_nat_ip    = false
   user_data_path   = "scripts/cloud-init.yaml"
   external_disks   = []
-  network_configs  = [{index = 1, network = var.vm_subnet, nat_ip = ""}]
+  network_configs  = [{index = 1, network = var.vm_subnet, nat_ip = "", network_ip = var.private_ip}]
 }

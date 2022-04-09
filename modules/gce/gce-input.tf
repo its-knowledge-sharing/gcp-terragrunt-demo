@@ -60,3 +60,9 @@ variable "startup_script_path" {
   nullable = true
   default = ""
 }
+
+variable "private_ip" {
+  type     = string
+  nullable = true
+  default = ""
+}

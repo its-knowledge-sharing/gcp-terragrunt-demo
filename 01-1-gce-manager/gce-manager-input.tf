@@ -1,5 +1,5 @@
 
-variable "gce_rke_service_account" {
+variable "gce_manager_service_account" {
   type = string
   nullable = false 
 }
@@ -21,23 +21,12 @@ variable "vpc_name" {
   nullable = false 
 }
 
-variable "boot_disk_image" {
+variable "rke_manager_ip" {
   type     = string
   nullable = false 
 }
 
-variable "rke_masters" {
-  type = list(object({
-    seq   = string
-    zone  = string
-    ip    = string
-  }))
-}
-
-variable "rke_workers" {
-  type = list(object({
-    seq   = string
-    zone  = string
-    ip    = string
-  }))
+variable "boot_disk_image" {
+  type     = string
+  nullable = false 
 }
