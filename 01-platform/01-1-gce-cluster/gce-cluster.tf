@@ -1,5 +1,5 @@
 module "rke-master" {
-  for_each = {for node in var.rke_masters: "${node.name}=${node.value}" => node}
+  for_each = {for node in var.rke_masters: "${node.zone}=${node.seq}" => node}
 
 
   source          = "../../modules/gce"
