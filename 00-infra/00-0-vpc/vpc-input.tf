@@ -3,3 +3,7 @@ variable "vpc_name" {
   nullable = false 
 }
 
+variable "region" {
+  type     = string
+  nullable = false 
+}
