@@ -13,19 +13,7 @@ inputs = {
   gce_manager_service_account = "gce-manager@${local.project}.iam.gserviceaccount.com"
   gce_rke_service_account = "gce-rke@${local.project}.iam.gserviceaccount.com"
 
-  rke_manager_ip = "10.10.1.100"
-
-  rke_masters = [
-    { seq = "01", zone = "a", ip = "10.10.1.1"},
-    { seq = "02", zone = "b", ip = "10.10.1.2"},
-    { seq = "03", zone = "c", ip = "10.10.1.3"}
-  ]
-
-  rke_workers = [
-    { seq = "01", zone = "a", ip = "10.10.1.11"},
-    { seq = "02", zone = "b", ip = "10.10.1.12"},
-    { seq = "03", zone = "c", ip = "10.10.1.13"}
-  ]  
+  rke_manager_ip = "10.10.1.100"    
 }
 
 ################################## Common ########################################
