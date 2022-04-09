@@ -17,7 +17,6 @@ module "rke-master" {
   startup_script_path = "scripts/startup.bash"
 }
 
-/*
 module "rke-worker" {
   for_each = {for node in var.rke_workers: "${var.region}-${node.zone}-${node.seq}" => node}
   source          = "../../modules/gce"
@@ -35,4 +34,3 @@ module "rke-worker" {
   project = var.project
   startup_script_path = "scripts/startup.bash"
 }
-*/
