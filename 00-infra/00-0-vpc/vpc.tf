@@ -6,6 +6,10 @@ resource "google_compute_network" "vpc" {
 }
 
 resource "google_compute_subnetwork" "rke-demo-subnet-001" {
+  depends_on = [
+    google_compute_network.vpc
+  ]
+
   name          = "rke-demo-subnet-001"
   ip_cidr_range = "10.10.1.0/24" # Make sure it is no overlaping with others
   region        = var.region
