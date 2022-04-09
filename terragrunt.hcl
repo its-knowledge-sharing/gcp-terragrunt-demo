@@ -14,15 +14,15 @@ inputs = {
   gce_rke_service_account = "gce-rke@${local.project}.iam.gserviceaccount.com"
 
   rke_masters = [
-    { seq = "01", zone = "a", ip = "10.10.100.1"},
-    { seq = "02", zone = "b", ip = "10.10.100.2"},
-    { seq = "03", zone = "c", ip = "10.10.100.3"}
+    { seq = "01", zone = "a", ip = "10.10.1.1"},
+    { seq = "02", zone = "b", ip = "10.10.1.2"},
+    { seq = "03", zone = "c", ip = "10.10.1.3"}
   ]
 
   rke_workers = [
-    { seq = "01", zone = "a", ip = "10.10.100.11"},
-    { seq = "02", zone = "b", ip = "10.10.100.12"},
-    { seq = "03", zone = "c", ip = "10.10.100.13"}
+    { seq = "01", zone = "a", ip = "10.10.1.11"},
+    { seq = "02", zone = "b", ip = "10.10.1.12"},
+    { seq = "03", zone = "c", ip = "10.10.1.13"}
   ]  
 }
 

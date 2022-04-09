@@ -14,6 +14,7 @@ packages:
   - gnupg-agent
   - software-properties-common
 runcmd:
+  # This can be improved by create custom image
   # install docker following the guide: https://docs.docker.com/install/linux/docker-ce/ubuntu/
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
