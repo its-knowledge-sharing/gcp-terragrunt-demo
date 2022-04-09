@@ -1,4 +1,4 @@
-module "ipfs-gce-ase1-a" {
+module "rke-manager-1" {
   source          = "../modules/gce"
 
   vm_name         = "rke-manager"
