@@ -4,12 +4,12 @@ module "rke-master" {
   source          = "../../modules/gce"
 
   vm_name         = "rke-master"
-  vm_sequence     = "${each.seq}"
+  vm_sequence     = "${each.value.seq}"
   vm_tags         = ["rke-master"]
   vm_service_account = var.gce_rke_service_account
   boot_disk_image  = var.boot_disk_image
   vm_machine_type  = "e2-small"
-  vm_zone          = "${var.region}-${each.zone}"
+  vm_zone          = "${var.region}-${each.value.zone}"
   vm_user          = "devops"
   vm_subnet        = var.vpc_name
   vm_ext_disk_size = 100 # 100GB
