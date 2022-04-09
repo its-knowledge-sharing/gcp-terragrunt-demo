@@ -7,9 +7,7 @@ locals {
 inputs = {
   project = local.project
   region = local.region
-  
-  name_prefix = "evermed-edh"
-  vpc_name  = "evermed-edh-vpc"
+  vpc_name  = "default"
 
   gce_manager_service_account = "gce-manager@${local.project}.iam.gserviceaccount.com"
   gce_rke_service_account = "gce-rke@${local.project}.iam.gserviceaccount.com"

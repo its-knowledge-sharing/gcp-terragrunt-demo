@@ -15,3 +15,8 @@ variable "region" {
   nullable = true
   default = ""
 }
+
+variable "vpc_name" {
+  type     = string
+  nullable = false 
+}
