@@ -3,7 +3,7 @@ module "rke-manager-1" {
 
   vm_name         = "rke-manager"
   vm_sequence     = "00"
-  vm_tags         = [rke-manager]
+  vm_tags         = ["rke-manager"]
   vm_service_account = var.gce_manager_service_account
   boot_disk_image  = "projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204"
   vm_machine_type  = "e2-small"
