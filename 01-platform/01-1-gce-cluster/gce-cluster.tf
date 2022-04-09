@@ -1,5 +1,5 @@
 module "rke-master" {
-  for_each = toset(var.rke_masters)
+  for_each = var.rke_masters
 
   source          = "../../modules/gce"
 
@@ -19,6 +19,7 @@ module "rke-master" {
 
 /*
 module "rke-worker" {
+  for_each = var.rke_workers
   source          = "../../modules/gce"
 
   vm_name         = "rke-worker"
