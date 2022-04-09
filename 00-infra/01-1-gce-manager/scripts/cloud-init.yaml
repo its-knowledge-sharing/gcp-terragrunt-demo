@@ -23,7 +23,9 @@ runcmd:
   # install docker-compose following the guide: https://docs.docker.com/compose/install/
   - sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   - sudo chmod +x /usr/local/bin/docker-compose
-
+  # install terragrunt
+  - curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v0.36.6/terragrunt_linux_amd64 -o /usr/local/bin/terragrunt
+  - sudo chmod +x /usr/local/bin/terragrunt
 power_state:
   mode: reboot
   message: Restarting after installing docker & docker-compose
