@@ -1,5 +1,5 @@
 module "rke-manager-1" {
-  source          = "../../modules/gce"
+  source          = "../modules/gce"
 
   vm_name         = "rke-manager"
   vm_sequence     = "00"
