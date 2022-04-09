@@ -1,6 +1,5 @@
 module "rke-master" {
-  for_each = {for node in var.rke_masters: "${node.zone}=${node.seq}" => node}
-
+  for_each = {for node in var.rke_masters: "${var.region}-${node.zone}-${node.seq}" => node}
 
   source          = "../../modules/gce"
 
@@ -20,7 +19,7 @@ module "rke-master" {
 
 /*
 module "rke-worker" {
-  for_each = var.rke_workers
+  for_each = {for node in var.rke_workers: "${var.region}-${node.zone}-${node.seq}" => node}
   source          = "../../modules/gce"
 
   vm_name         = "rke-worker"
