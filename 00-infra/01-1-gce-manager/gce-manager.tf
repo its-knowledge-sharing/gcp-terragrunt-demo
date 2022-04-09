@@ -9,7 +9,7 @@ module "rke-manager-1" {
   vm_machine_type  = "e2-small"
   vm_zone          = "${var.region}-a"
   vm_user          = "devops"
-  vm_subnet        = var.vpc_name
+  vm_subnet        = "rke-demo-subnet-001"
   vm_ext_disk_size = 100 # 100GB
   project = var.project
   startup_script_path = "scripts/startup.bash"
