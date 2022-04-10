@@ -21,7 +21,7 @@ inputs = {
 remote_state {
  backend = "gcs" 
  config = {
-   bucket = "nap-devops-nonprod-tf"
+   bucket = "${local.project}-tf"
    prefix = path_relative_to_include()
    project = "${local.project}"
    location = "${local.region}"
